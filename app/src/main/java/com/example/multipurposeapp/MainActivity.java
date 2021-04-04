@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             sharedPreferences = getSharedPreferences("multiAppShared", Context.MODE_PRIVATE);
             sharedPreferences.edit().putBoolean("logged",false).remove("email").remove("email_user").remove("id_user").apply();
             startActivity(new Intent(MainActivity.this,LoginActivity.class));
-            finish();
+            this.finish();
         }
         return super.onOptionsItemSelected(item);
     }

@@ -29,17 +29,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:background="@android:color/darker_gray"
-        android:backgroundTint="@color/app_blue"
+        android:backgroundTint="@color/app_gray"
         android:ems="10"
         android:hint="@string/login_edi_lbl"
+        android:textColorHint="@color/app_gray"
         app:startIconDrawable="@drawable/ic_baseline_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/app_blue"
             android:background="@drawable/my_button"
-            android:inputType="textWebEmailAddress">
+            android:backgroundTint="@color/app_blue"
+            android:inputType="textWebEmailAddress"
+            android:textColor="@color/app_gray">
 
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -50,11 +52,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:background="@android:color/darker_gray"
-        android:backgroundTint="@color/app_blue"
+        android:backgroundTint="@color/app_gray"
         android:ems="10"
 
         android:hint="@string/pwd_hint"
+        android:textColorHint="@color/app_gray"
         app:endIconMode="password_toggle"
+        app:hintTextColor="@color/app_gray"
         app:startIconDrawable="@drawable/ic_baseline_vpn_key_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -62,7 +66,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/my_button"
             android:backgroundTint="@color/app_blue"
-            android:inputType="textPassword">
+            android:inputType="textPassword"
+            android:textColor="@color/app_gray">
 
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>

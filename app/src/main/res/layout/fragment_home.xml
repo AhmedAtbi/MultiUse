@@ -57,7 +57,8 @@
         android:layout_marginLeft="329dp"
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="#0D47A1"
+        android:backgroundTint="@color/app_gray"
         android:clickable="true"
+        app:fabSize="mini"
         app:srcCompat="@drawable/ic_add_24" />
 </RelativeLayout>

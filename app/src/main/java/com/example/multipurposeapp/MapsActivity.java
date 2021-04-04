@@ -24,7 +24,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private double lon,lat;
     private String  city;
-    boolean sms_permission = true;
+
 
 
     @Override
@@ -35,23 +35,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_SMS)
-                == PackageManager.PERMISSION_DENIED)
-        {
-            ActivityCompat.requestPermissions(this,
-                    new String[]
-                            { Manifest.permission.ACCESS_COARSE_LOCATION,
-                                    Manifest.permission.ACCESS_FINE_LOCATION},
-                    1);
-        }
-        else
-        {
-            sms_permission=true;
-        }
-
-
-
-
 
 
     }
@@ -78,15 +61,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(marker).title("Marker in "+city));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(marker));
     }
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode==1)
-        {
-            if (grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED)
-            {
-                sms_permission=true;
-            }
-            else this.finish();
-        }
-    }
+
 }

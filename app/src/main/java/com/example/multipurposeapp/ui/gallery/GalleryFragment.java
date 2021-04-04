@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.multipurposeapp.model.Weather;
 import com.example.multipurposeapp.MapsActivity;
+import com.example.multipurposeapp.model.Weather;
 import com.example.multiuseapp.R;
 import com.example.multipurposeapp.adapter.WeatherAdapter;
 import com.google.gson.JsonArray;
@@ -61,11 +61,15 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), MapsActivity.class);
-                intent.putExtra("lon",lon);
-                intent.putExtra("lat",lat);
-                intent.putExtra("city",city_search.getText().toString());
-                Toast.makeText(getActivity(), "City : "+city_search.getText().toString()+" Long "+lon+" lat "+lat, Toast.LENGTH_SHORT).show();
-                startActivity(intent);
+                if (lon==null||lat==null||city_search.getText().toString().isEmpty()){
+                    Toast.makeText(getActivity(), "Search for a city first", Toast.LENGTH_SHORT).show();
+                }else {
+                    intent.putExtra("lon", lon);
+                    intent.putExtra("lat", lat);
+                    intent.putExtra("city", city_search.getText().toString());
+                    Toast.makeText(getActivity(), "City : " + city_search.getText().toString() + " Long " + lon + " lat " + lat, Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
+                }
             }
         });
 
