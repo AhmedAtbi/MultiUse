@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.multipurposeapp.ui.gallery.GalleryFragment">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/layout_search"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/search_view_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="#0D47A1"
+            android:textColor="#0D47A1"
+            android:layout_marginRight="5dp"
+            android:layout_weight="90" />
+
+        <ImageButton
+            android:id="@+id/btn_search_contact"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="10"
+            android:backgroundTint="#0D47A1"
+            android:background="@drawable/my_button"
+            app:srcCompat="@drawable/ic_search" />
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_contact"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_search">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_contact_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="329dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#0D47A1"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_add_24" />
+</RelativeLayout>

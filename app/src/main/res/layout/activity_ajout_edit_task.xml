@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context="com.example.multipurposeapp.AjoutEditTaskActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_nom_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/my_button"
+        android:backgroundTint="#FFAEEA00"
+        android:ems="10"
+        android:hint="@string/hint_task_name"
+        app:startIconDrawable="@drawable/ic_baseline_notes_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button"
+            android:backgroundTint="@color/app_gray"
+            android:inputType="textWebEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_description_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/my_button"
+        android:backgroundTint="#FFAEEA00"
+        android:ems="10"
+        android:hint="@string/hint_description_task"
+        app:startIconDrawable="@drawable/ic_baseline_description_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button"
+            android:backgroundTint="@color/app_gray"
+            android:inputType="textWebEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <NumberPicker
+        android:id="@+id/number_picker_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

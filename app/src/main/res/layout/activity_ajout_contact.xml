@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context="com.example.multipurposeapp.AjoutEditContactActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_add_nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/my_button"
+        android:backgroundTint="#FFAEEA00"
+        android:ems="10"
+        android:layout_marginTop="130dp"
+        android:hint="@string/nom_edi_lbl"
+        app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/app_gray"
+            android:background="@drawable/my_button"
+            android:inputType="textWebEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_add_prenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/my_button"
+        android:backgroundTint="#FFAEEA00"
+        android:ems="10"
+        android:hint="@string/prenom_edi_lbl"
+        app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/app_gray"
+            android:background="@drawable/my_button"
+            android:inputType="textWebEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_add_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/my_button"
+        android:backgroundTint="#FFAEEA00"
+        android:ems="10"
+        android:hint="@string/num_edi_lbl"
+        app:startIconDrawable="@drawable/ic_baseline_format_list_numbered_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/app_gray"
+            android:background="@drawable/my_button"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+
+            android:text="Homme" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femme" />
+
+    </RadioGroup>
+
+</LinearLayout>
