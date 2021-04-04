@@ -26,7 +26,7 @@ public class ContactManager {
 
 
     public ArrayList<Contact> searchContact(String name){
-        Cursor myCursor = db.rawQuery("SELECT * FROM "+ ContactTaskDbSqlite.TABLE_CONTACT+" WHERE "+ ContactTaskDbSqlite.COL_NOM+" LIKE '"+name+"%'",null);
+        Cursor myCursor = db.rawQuery("SELECT * FROM "+ ContactTaskDbSqlite.TABLE_CONTACT+" WHERE "+ ContactTaskDbSqlite.COL_NOM+" LIKE '"+name+"%' OR "+ ContactTaskDbSqlite.COL_PRENOM+" LIKE '"+name+"%' OR "+ ContactTaskDbSqlite.COL_NUM+" LIKE '"+name+"%' ORDER BY "+ ContactTaskDbSqlite.COL_NOM,null);
         ArrayList<Contact> data_contact = new ArrayList<>();
         myCursor.moveToFirst();
 

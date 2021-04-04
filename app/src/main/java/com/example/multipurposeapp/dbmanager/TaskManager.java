@@ -58,8 +58,7 @@ public class TaskManager {
                 null,
                 null,
                 null,
-                null,
-                ContactTaskDbSqlite.COL_PRIORITY_TASK);
+                null,ContactTaskDbSqlite.COL_PRIORITY_TASK+" DESC");
 
         myCursor.moveToFirst();
 

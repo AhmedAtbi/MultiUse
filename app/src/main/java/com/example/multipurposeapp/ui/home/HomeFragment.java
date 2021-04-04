@@ -71,19 +71,11 @@ public class HomeFragment extends Fragment {
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edt_search_contact.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(getActivity(), "Search text is empty", Toast.LENGTH_SHORT).show();
 
-                }else{
                     data_contact = contactManager.searchContact(edt_search_contact.getText().toString().trim());
                     adapter = new RecyclerContactAdapter(getActivity(),data_contact);
                     recyclerView.setAdapter(adapter);
                     edt_search_contact.clearFocus();
-
-
-
-                }
-
 
             }
         });
